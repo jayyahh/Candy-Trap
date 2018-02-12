@@ -1,0 +1,10 @@
+sceneSetups:
+- path: Assets/Scenes/Main_Scene.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Rule_Scene.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Title_Scene.unity
+  isLoaded: 1
+  isActive: 1
