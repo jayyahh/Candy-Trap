@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Candy : MonoBehaviour
 {
-    
-
+	/*
     public bool blue = false;
     public bool red = false;
     public bool purple = false;
     public bool green = false;
+    */
+
+    public bool collideOnce; //differentiate between outer candies and inner candies
+
     public Transform target; // Big object
     Vector3 targetDirection;
 
@@ -60,4 +63,29 @@ public class Candy : MonoBehaviour
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
+
+	// Right now, the candies will collide once with each other first before ignoring collision
+	// IDK WHY
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+		
+        if (col.gameObject.CompareTag("Blue"))
+        {
+			Physics2D.IgnoreCollision (this.gameObject.GetComponent<Collider2D> (), col.collider);
+        }
+		if (col.gameObject.CompareTag("Purple"))
+		{
+			Physics2D.IgnoreCollision (this.gameObject.GetComponent<Collider2D> (), col.collider);
+		}
+		if (col.gameObject.CompareTag("Green"))
+		{
+			Physics2D.IgnoreCollision (this.gameObject.GetComponent<Collider2D> (), col.collider);
+		}
+		if (col.gameObject.CompareTag("Red"))
+		{
+			Physics2D.IgnoreCollision (this.gameObject.GetComponent<Collider2D> (), col.collider);
+		}
+			
+    }
+
 }

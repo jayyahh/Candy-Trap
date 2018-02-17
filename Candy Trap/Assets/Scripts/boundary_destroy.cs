@@ -34,7 +34,7 @@ public class boundary_destroy : MonoBehaviour
 		setLife ();
     }
 
-    void setScore()
+	void setScore()
 	{
 		scoreText.text = "Score: " + score.ToString ();
 	}
@@ -50,32 +50,29 @@ public class boundary_destroy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Blue"))
         {
-
             countBlue--;
-
         }
         if (other.gameObject.CompareTag("Red"))
         {
             countRed--;
-
         }
         if (other.gameObject.CompareTag("Purple"))
         {
             countPurple--;
-
         }
         if (other.gameObject.CompareTag("Green"))
         {
             countGreen--;
-
         }
 
 		if (life > 0 && other.gameObject.activeSelf) {
 			life--;
 		}
-        Destroy(other.gameObject);
-        setLife ();
+		Destroy(other.gameObject);
+
+		setLife ();
 		if (life == 0) {
+			
 			restartbutton.SetActive (true);
 		}
     }
@@ -88,11 +85,12 @@ public class boundary_destroy : MonoBehaviour
         {
             GameObject blue = collision.gameObject;
             Candy candyblue = blue.GetComponent<Candy>();
-            if (candyblue.blue == false)
-            {
+
+		//	if (candyblue.collideOnce == false)
+        //  {
                 countBlue++;
-            }
-            candyblue.blue = true;
+        //  }
+			candyblue.collideOnce = true;
 
 
             if (countBlue == 3)
@@ -100,11 +98,9 @@ public class boundary_destroy : MonoBehaviour
                 GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Blue");
                 foreach (GameObject target in gameObjects)
                 {
-                    if (target.GetComponent<Candy>().blue)
-                    {
-                        //Destroy(target);
-                        target.SetActive(false);
-                    }
+					if (target.GetComponent<Candy> ().collideOnce)
+						target.SetActive (false);
+                    //GameObject.Destroy(target);
                 }
 				score += bluePoint * 3;
 				bluePoint *= 2;
@@ -116,22 +112,20 @@ public class boundary_destroy : MonoBehaviour
         {
             GameObject red = collision.gameObject;
             Candy candyred = red.GetComponent<Candy>();
-            if (candyred.red == false)
-            {
+			//if (candyred.collideOnce == false)
+           // {
                 countRed++;
-            }
-            candyred.red = true;
+           // }
+			candyred.collideOnce = true;
 
             if (countRed == 3)
             {
                 GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Red");
                 foreach (GameObject target in gameObjects)
                 {
-                    if (target.GetComponent<Candy>().red)
-                    {
-                        //Destroy(target);
-                        target.SetActive(false);
-                    }
+					if (target.GetComponent<Candy>().collideOnce)
+						target.SetActive (false);
+						//GameObject.Destroy(target);
                 }
 				score += redPoint * 3;
 				redPoint *= 2;
@@ -143,22 +137,20 @@ public class boundary_destroy : MonoBehaviour
         {
             GameObject purple = collision.gameObject;
             Candy candypurple = purple.GetComponent<Candy>();
-            if (candypurple.purple == false)
-            {
+		//	if (candypurple.collideOnce == false)
+        //    {
                 countPurple++;
-            }
-            candypurple.purple = true;
+        //    }
+			candypurple.collideOnce = true;
 
             if (countPurple == 3)
             {
                 GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Purple");
                 foreach (GameObject target in gameObjects)
                 {
-                    if (target.GetComponent<Candy>().purple)
-                    {
-                        //Destroy(target);
-                        target.SetActive(false);
-                    }
+					if (target.GetComponent<Candy>().collideOnce)
+						target.SetActive (false);
+						//GameObject.Destroy(target);
                 }
 				score += purplePoint * 3;
 				purplePoint *= 2;
@@ -171,22 +163,20 @@ public class boundary_destroy : MonoBehaviour
             
             GameObject green = collision.gameObject;
             Candy candygreen = green.GetComponent<Candy>();
-            if (candygreen.green == false)
-            {
+		//	if (candygreen.collideOnce == false)
+        //    {
                 countGreen++;
-            }
-            candygreen.green = true;
+        //    }
+			candygreen.collideOnce = true;
 
             if (countGreen == 3)
             {
                 GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Green");
                 foreach (GameObject target in gameObjects)
                 {
-                    if (target.GetComponent<Candy>().green)
-                    {
-                        //Destroy(target);
-                        target.SetActive(false);
-                    }
+					if (target.GetComponent<Candy>().collideOnce)
+						target.SetActive (false);
+						//GameObject.Destroy(target);
                 }
 				score += greenPoint * 3;
 				greenPoint *= 2;
