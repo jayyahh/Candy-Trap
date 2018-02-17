@@ -3,20 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class rotate_face : MonoBehaviour {
-    /*
-    void Update()
-    {
-        Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 dir = mp;
-        dir -= (Vector3)transform.position;
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if (angle < transform.eulerAngles.z || angle > 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, angle);
-        }
-    }
-*/
     public GameObject OurObject; // the object you want to rotate. 
 
     public float RotationTime = 3f; // In seconds
@@ -88,50 +75,4 @@ public class rotate_face : MonoBehaviour {
             yield return 0;
         }
     }
-    /*
-    public float speed = 10;
-    private Quaternion startingRotation;
-
-    void Start()
-    {
-        //save the starting rotation
-        startingRotation = this.transform.rotation;
-    }
-
-    void Update()
-    {
-        //return back to the starting rotation
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            StopAllCoroutines();
-            StartCoroutine(Rotate(0));
-        }
-
-        //go to 90 degrees with right arrow
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            StopAllCoroutines();
-            StartCoroutine(Rotate(90));
-        }
-
-        //go to -90 degrees with left arrow
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            StopAllCoroutines();
-            StartCoroutine(Rotate(-90));
-        }
-
-    }
-
-    IEnumerator Rotate(float rotationAmount)
-    {
-        Quaternion finalRotation = Quaternion.Euler(0, rotationAmount, 0) * startingRotation;
-
-        while (this.transform.rotation != finalRotation)
-        {
-            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, finalRotation, Time.deltaTime * speed);
-            yield return 0;
-        }
-    }
-    */
 }

@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 646
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 30
+  controlID: 71
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -345,24 +345,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 493}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006e2700007627000098270000cc270000de270000102800006e2900007029000072290000
+    m_ExpandedIDs: 000000006e27000098270000cc270000de270000102800006e2900007029000072290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: destroy
+      m_OriginalName: destroy
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 1914
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -460,7 +460,7 @@ MonoBehaviour:
       y: 17
       width: 584
       height: 558
-    m_Scale: {x: 0.45625004, y: 0.45625004}
+    m_Scale: {x: 0.6975, y: 0.6975}
     m_Translation: {x: 292, y: 279}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -468,10 +468,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -639.99994
-      y: -611.5068
-      width: 1279.9999
-      height: 1223.0135
+      x: -418.638
+      y: -400
+      width: 837.276
+      height: 800
     m_MinimalGUI: 1
   m_defaultScale: 0.6975
   m_TargetTexture: {fileID: 0}
@@ -588,7 +588,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 8e99ffff429affff5e9bffff629bffff669bffff14f4ffff16f4ffff9efbffff00000000
+    m_ExpandedIDs: f47bffff9efbffff000000000a290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +608,6 @@ MonoBehaviour:
     m_SearchString: 
   m_ExpandedScenes:
   - Main_Scene
-  - Rule_Scene
-  - Title_Scene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting

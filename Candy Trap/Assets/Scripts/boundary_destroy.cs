@@ -34,7 +34,7 @@ public class boundary_destroy : MonoBehaviour
 		setLife ();
     }
 
-	void setScore()
+    void setScore()
 	{
 		scoreText.text = "Score: " + score.ToString ();
 	}
@@ -101,7 +101,10 @@ public class boundary_destroy : MonoBehaviour
                 foreach (GameObject target in gameObjects)
                 {
                     if (target.GetComponent<Candy>().blue)
+                    {
+                        //Destroy(target);
                         target.SetActive(false);
+                    }
                 }
 				score += bluePoint * 3;
 				bluePoint *= 2;
@@ -125,7 +128,10 @@ public class boundary_destroy : MonoBehaviour
                 foreach (GameObject target in gameObjects)
                 {
                     if (target.GetComponent<Candy>().red)
+                    {
+                        //Destroy(target);
                         target.SetActive(false);
+                    }
                 }
 				score += redPoint * 3;
 				redPoint *= 2;
@@ -149,7 +155,10 @@ public class boundary_destroy : MonoBehaviour
                 foreach (GameObject target in gameObjects)
                 {
                     if (target.GetComponent<Candy>().purple)
+                    {
+                        //Destroy(target);
                         target.SetActive(false);
+                    }
                 }
 				score += purplePoint * 3;
 				purplePoint *= 2;
@@ -174,7 +183,10 @@ public class boundary_destroy : MonoBehaviour
                 foreach (GameObject target in gameObjects)
                 {
                     if (target.GetComponent<Candy>().green)
+                    {
+                        //Destroy(target);
                         target.SetActive(false);
+                    }
                 }
 				score += greenPoint * 3;
 				greenPoint *= 2;

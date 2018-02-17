@@ -1,10 +1,6 @@
 ﻿
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-
-
-
 
 public class Generator : MonoBehaviour
 {
@@ -29,6 +25,37 @@ public class Generator : MonoBehaviour
         maxHeight = targetHeight.y - candyHeight;
 
         StartCoroutine(Spawn());
+    }
+    private void Update()
+    {
+        if (restartButton.activeSelf)
+        {
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Blue");
+            foreach (GameObject target in gameObjects)
+            {
+                Destroy(target);
+            }
+            gameObjects = GameObject.FindGameObjectsWithTag("Red");
+            foreach (GameObject target in gameObjects)
+            {
+                Destroy(target);
+            }
+            gameObjects = GameObject.FindGameObjectsWithTag("Green");
+            foreach (GameObject target in gameObjects)
+            {
+                Destroy(target);
+            }
+
+            gameObjects = GameObject.FindGameObjectsWithTag("Purple");
+            foreach (GameObject target in gameObjects)
+            {
+                Destroy(target);
+            }
+        }
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 
     IEnumerator Spawn ()
