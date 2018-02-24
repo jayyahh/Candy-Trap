@@ -11,12 +11,14 @@ public class boundary_destroy : MonoBehaviour
     int countPurple = 0;
     int countGreen = 0;
 	int score;
-	int bluePoint;
+    public static int highScore;
+    int bluePoint;
 	int redPoint;
 	int purplePoint;
 	int greenPoint;
 	public Text scoreText;
 	public GameObject restartbutton;
+    public Text highText;
 
 	int life;
 	public Text lifeText;
@@ -32,9 +34,25 @@ public class boundary_destroy : MonoBehaviour
 		greenPoint = 1;
 		setScore ();
 		setLife ();
+        highScore = PlayerPrefs.GetInt("highScore", highScore);
+        highText.text = "Highscore: " + highScore.ToString();
     }
 
-	void setScore()
+    private void Update()
+    {
+        setScore();
+        setLife();
+        if (score > highScore)
+        {
+            highScore = score;
+            highText.text = "Highscore: " + score.ToString();
+
+            PlayerPrefs.SetInt("highScore", highScore);
+            PlayerPrefs.Save();
+        }
+    }
+
+    void setScore()
 	{
 		scoreText.text = "Score: " + score.ToString ();
 	}
@@ -70,9 +88,7 @@ public class boundary_destroy : MonoBehaviour
 		}
 		Destroy(other.gameObject);
 
-		setLife ();
 		if (life == 0) {
-			
 			restartbutton.SetActive (true);
 		}
     }
@@ -105,7 +121,6 @@ public class boundary_destroy : MonoBehaviour
 				score += bluePoint * 3;
 				bluePoint *= 2;
                 countBlue = 0;
-				setScore ();
             }
         }
         if (collision.gameObject.CompareTag("Red"))
@@ -130,7 +145,6 @@ public class boundary_destroy : MonoBehaviour
 				score += redPoint * 3;
 				redPoint *= 2;
                 countRed = 0;
-				setScore ();
             }
         }
         if (collision.gameObject.CompareTag("Purple"))
@@ -155,7 +169,6 @@ public class boundary_destroy : MonoBehaviour
 				score += purplePoint * 3;
 				purplePoint *= 2;
                 countPurple = 0;
-				setScore ();
             }
         }
         if (collision.gameObject.CompareTag("Green"))
@@ -181,7 +194,6 @@ public class boundary_destroy : MonoBehaviour
 				score += greenPoint * 3;
 				greenPoint *= 2;
                 countGreen = 0;
-				setScore ();
             }
         }
     }

@@ -4,7 +4,7 @@ Assets/Scenes/Title_Scene.unity
 Assets/Scenes/Rule_Scene.unity
 Assets/Scenes/Main_Scene.unity
 SceneListEnd?
-15ba5e041a45dd17708f7010ff66d314 Assembly-CSharp.dll:.Candy
+f44046fa9ddf8a2745970f589cf4d244 Assembly-CSharp.dll:.Candy
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -17,7 +17,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-245c160dba67b7d7fd92886bcd72fcd1 Assembly-CSharp.dll:.boundary_destroy
+df4a3ad9c0b8d6dd944e56a153009f14 Assembly-CSharp.dll:.boundary_destroy
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
